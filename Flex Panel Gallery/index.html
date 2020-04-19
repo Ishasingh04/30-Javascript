@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+	<title>FLEX PANELS</title>
+	<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Amatic+SC'>
+</head>
+<body>
+<div class="panels">
+	<div class="panel panel1">
+		<p>Hey</p>
+		<p>Let's</p>
+		<p>Dance</p>
+	</div>
+	<div class="panel panel2">
+		<p>Give</p>
+		<p>Take</p>
+		<p>Receive</p>
+	</div>
+	<div class="panel panel3">
+		<p>Experience</p>
+		<p>It</p>
+		<p>Today</p>
+	</div>
+	<div class="panel panel4">
+		<p>Give</p>
+		<p>All</p>
+		<p>You Can</p>
+	</div>
+	<div class="panel panel5">
+		<p>Life</p>
+		<p>In</p>
+		<p>Motin</p>
+	</div>
+</div>
+
+<style type="text/css">
+
+html{
+	box-sizing: border-box;
+	background:#ffc600;
+	font-family:'helvetica neue';
+	font-size: 20px;
+	font-weight:200;	
+}
+body{
+	margin:0;
+}
+
+*,*:before, *:after{
+	box-sizing: inherit;
+}
+
+.panels{
+	min-height:100vh;
+	overflow: hidden;
+	display:flex;
+}
+
+.panel{
+	background:#6B0F9C;
+	box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+	color:white;
+	text-align:center;
+	align-items:center;
+	transition: 
+	font-size 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+	flex 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11),
+	background 0.2s;
+	font-size: 20px;
+	background-size:cover;
+	background-position:center;	
+ 	flex:1;
+ 	justify-content:center;
+ 	align-items: center;
+ 	display:flex;
+ 	flex-direction: column;
+}
+
+.panel1{
+	background-image:url(http://1.bp.blogspot.com/-ZEJZXdU2l1A/USZEf7VQ2QI/AAAAAAAASQo/VJwVthrnmnw/s1366/butterfly-hd-wallpaper-6.jpg);
+}
+.panel2{
+	background-image:url(https://cdn.wallpapersafari.com/18/29/dI6XsD.jpg);
+}
+.panel3{
+	background-image:url(http://www.hdwallpaperspulse.com/wp-content/uploads/2016/10/17/eiffel-tower-sunset-view-hd-image.jpg);
+}
+.panel4{
+	background-image:url(https://wallpapertag.com/wallpaper/full/6/c/2/409821-vertical-full-screen-hd-wallpaper-1080x1920.jpg);
+}
+.panel5{
+	background-image:url(https://hdwallpaper20.com/wp-content/uploads/2016/06/awesome-wallpapers-hd1.jpg);
+}
+
+/* Flex Children*/
+.panel>*{
+	margin:0;
+	width: 100%;
+	transition:transform 0.5s;
+	flex:1 0 auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.panel > *:first-child{transform: translateY(-100%);}
+.panel.open-active > *:first-child{transform: translateY(0);}
+.panel > *:last-child{transform: translateY(100%);}
+.panel.open-active > *:last-child{transform: translateY(0);}
+
+.panel p{
+	text-transform:uppercase;
+	font-family:'Amatic Sc',cursive;
+	text-shadow:0 0 4px rgba(0,0,0,0.72),0 0 14px rgba(0,0,0,0.45);
+	font-size: 2em;
+}
+.panel p:nth-child(2){
+	font-size:4em;
+}
+
+.panel.open{
+	flex:5;
+	font-size:40px;
+}
+
+.cta{
+	color:white;
+	text-decoration: none;
+}
+
+</style>
+
+</body>
+<script src="script.js">
+	
+</script>
+</html>
